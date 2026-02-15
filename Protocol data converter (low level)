@@ -1,0 +1,23 @@
+numero = float(input("Ingresa el número: "))
+n = int(numero)
+
+if n == 0:
+    resultado = "0"
+else:
+    resultado = ""
+    temp_bi = n
+    while temp_bi > 0:
+        resultado = str(temp_bi % 2) + resultado
+        temp_bi //= 2
+    print(f"Resultado Binario: {resultado}")
+
+if n == 0:
+    resultado = "0"
+else:
+    resultado = ""
+    temp_hexa = n
+    letras = "0123456789ABCDEF" 
+    while temp_hexa > 0:
+        resultado = letras[temp_hexa % 16] + resultado
+        temp_hexa //= 16
+    print(f"Resultado Hexadecimal: {resultado}")
