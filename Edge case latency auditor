@@ -1,0 +1,28 @@
+tiempos_input = input("Ingresa los tiempos de respuesta: ")
+umbral = float(input("Ingresa el umbral crítico: "))
+
+tiempos = [float(t.strip()) for t in tiempos_input.split(",")]
+promedio = sum(tiempos) / len(tiempos)
+
+flag_pico = False
+
+for t in tiempos:
+    if t > (promedio * 3):
+        flag_pico = True
+        break 
+
+promedio_alto = promedio > umbral
+alerta = promedio_alto or flag_pico
+
+print("\n" + "=" * 30)
+print(f"Promedio de latencia: {promedio:.2f}ms")
+print(f"¿Umbral excedido?: {promedio_alto}")
+print(f"¿Pico detectado?: {flag_pico}")
+print("-" * 30)
+print(f"¿Disparar alerta?: {alerta}")
+print("=" * 30)
+
+if alerta:
+    print("Se han detectado anomalías en los tiempos.")
+else:
+    print("Los parámetros están bajo control.")
