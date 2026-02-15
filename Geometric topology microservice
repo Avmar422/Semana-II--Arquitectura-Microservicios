@@ -1,0 +1,17 @@
+a= int(input("Primer ángulo: "))
+b= int(input("Segundo ángulo: "))
+c= int(input("Tercer ángulo: "))
+
+if (a + b + c) !=180: 
+    print("No es un triángulo valido.")
+else:
+    print("Es un triángulo valido...")
+    if a == b == c:
+        print("Es un triángulo equilátero.")
+    elif a == b or b == c or a == c:
+        print("Es un triángulo isósceles")
+    else:
+        print("Es un triángulo escaleno")
+        
+    if a == 90 or b == 90 or c == 90:
+        print("Tiene un ángulo recto (90°)")
