@@ -1,0 +1,17 @@
+import math
+
+x1= float(input("Coordenada x1: "))
+y1= float(input("Coordenada y1: "))
+x2= float(input("Coordenada x2: "))
+y2= float(input("Coordenada y2: "))
+
+distancia= math.sqrt((x2 - x1) ** 2 + (y2 - y1)**2)
+proxima= distancia < 10
+
+print(f"Distancia: {distancia:.2f}")
+print(f"¿Está en el rango de proximidad?: {proxima}")
+
+if proxima:
+    print("Los nodos están próximos")
+else:
+    print("Los nodos están demasiado lejos")
