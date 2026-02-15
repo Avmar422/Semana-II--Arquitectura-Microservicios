@@ -1,0 +1,16 @@
+token= (input("Ingrese el token: "))
+largo= len(token) > 12
+
+cantidad_numeros= 0
+for c in token:
+    if c.isdigit():
+        cantidad_numeros +=1
+
+    tiene_numero= cantidad_numeros > 0
+
+    no_es_test= not token.startswith("TEST")
+
+True
+valido= largo and tiene_numero and no_es_test
+
+print(f"¿token autorizado?: {valido}")
