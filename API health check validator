@@ -1,0 +1,7 @@
+latencia= int(input("Ingrese latencia: "))
+uso_cpu= int(input("Ingrese porcentaje de uso del cpu: "))
+estado_db= input("¿Esá la DB conectada? (si/no) ").lower() == "si"
+
+apto_para_trafico= latencia < 200 and uso_cpu < 80 and estado_db
+
+print(f"¿Apto para recibir el trafico? {apto_para_trafico} ")
