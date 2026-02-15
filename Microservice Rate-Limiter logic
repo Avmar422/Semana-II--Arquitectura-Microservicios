@@ -1,0 +1,16 @@
+usuario= input("Ingrese usuario (premium/standard): ").lower()
+mantenimiento= input("¿El servidor está en mantenimiento?(si/no): ").lower() == "si"
+
+if mantenimiento:
+    limite= 0
+elif usuario == "premium":
+    limite= 1000
+elif usuario == "standard":
+    limite=100
+else:
+    limite= 0
+    print("Tipo de usuario no reconocido.")
+
+print(f"Estado del servidor: {"mantenimiento" if mantenimiento else "Activo"}")
+print(f"Usuario:{usuario}")
+print(f"Limite permitido: {limite} peticiones")
