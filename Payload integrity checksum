@@ -1,0 +1,18 @@
+mensaje= input("Ingrese el mensaje de la API: ")
+
+suma_ascii= 0
+
+for caracter in mensaje:
+    valor_numerico= ord(caracter)
+    suma_ascii += valor_numerico
+
+    par= (suma_ascii % 2 == 0)
+
+    print(f"Suma total ASCII: {suma_ascii}")
+    print(f"¿Paquete Integro?: {par}")
+    print("-"*30)
+
+if par:
+      print("Mensaje verificado.")
+else:
+     print("Mensaje fue alterado.")
